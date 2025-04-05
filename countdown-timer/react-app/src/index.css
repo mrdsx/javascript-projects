@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto-Regular.ttf");
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    background-color: dodgerblue;
+    text-align: center;
+    align-items: center;
+    margin-top: 8em;
+    margin-left: 30%;
+    width: 40%;
+    padding: 50px 0 50px 0;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.countdown-time-remaining {
+    margin-top: 20px;
+}
+
+.countdown-time {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.counter {
+    padding: 10px;
+    .digit {
+        font-size: 40px;
+    }
+    .p-days, .p-hours, .p-minutes, .p-seconds {
+        font-size: 120%;
+    }
+}
+
+#input-date {
+    font-family: "Roboto", sans-serif;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #1e6eff;
+    color: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+::-webkit-calendar-picker-indicator {
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator:hover {
+    background-color: #dcdcdc;
+}
+
+.congratulation-title {
+    font-size: 20px;
+}
