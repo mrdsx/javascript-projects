@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding-top: 30vh;
+  input, button {
+    margin: 5px;
+    padding: 5px;
+  }
+}
+
+header, main {
+  display: flex;
+  justify-content: center;
+}
+
+#pokemon-sprite {
+  display: none;
+  margin-top: 1em;
+  height: 200px;
+}
