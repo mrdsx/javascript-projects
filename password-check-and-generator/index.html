@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор паролей</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="pass-app">
+    <header>
+      <h1>Сайт для генерации и проверки паролей</h1>
+    </header>
+
+    <main>
+      <button id="switch-btn">Режим: <span>генерация пароля</span></button>
+
+      <div class="app-tabs">
+        <div class="pass-gen app-tab">
+          <h2>Генератор паролей</h2>
+          <div class="pass-length">
+            <label for="pass-length-range">Длина пароля</label>
+            <div class="pass-length-options">
+              <input type="range" id="pass-length-range" value="16"
+              min="12" max="30" oninput="lengthValue.value=value">
+              <output id="lengthValue">16</output>
+            </div>
+          </div>
+          <div class="pass-symbols">
+            <span>Использовать:</span>
+            <div class="pass-symbols-options">
+              <div class="include-symbols">
+                <input type="checkbox" id="uppercase-symbols">
+                <label for="uppercase-symbols">Символы верхнего регистра</label>
+              </div>
+              <div class="include-symbols">
+                <input type="checkbox" id="lowercase-symbols">
+                <label for="lowercase-symbols">Символы нижнего регистра</label>
+              </div>
+              <div class="include-symbols">
+                <input type="checkbox" id="digit-symbols">
+                <label for="digit-symbols">Числа</label>
+              </div>
+              <div class="include-symbols">
+                <input type="checkbox" id="special-symbols">
+                <label for="special-symbols">Специальные символы</label>
+              </div>
+            </div>
+          </div>
+          <div class="pass-actions">
+            <div class="pass-output">
+              <input type="text" id="random-pass" readonly>
+            </div>
+            <div class="pass-buttons">
+              <input type="button" value="Сгенерировать пароль" id="generate-pass" onclick="showPass()">
+              <button id="copy-pass">Скопировать</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="pass-check app-tab">
+          <h2>Проверка пароля</h2>
+          <input type="text" id="pass" oninput="showPassStrength()">
+          <div class="pass-strength">Сложность:
+            <span class="strength-grade">Слабый</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="passGradeParams.js"></script>
+  <script src="switchMode.js"></script>
+  <script src="passGen.js"></script>
+  <script src="passCheck.js"></script>
+</body>
+</html>
